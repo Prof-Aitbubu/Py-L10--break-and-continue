@@ -28,3 +28,44 @@ for word in words:
         break
     print(word)
 
+# Task4: Password Checker (Max 3 Attempts)
+# Ask the user to enter a password. Let them try up to 3 times using a for loop. Break the loop if the correct password is entered.
+
+correct_password = 'Aitbubu123'
+
+for attempt in range(3):
+    password = input('Enter your password: ')
+    if password == correct_password:
+       print('Access granted!')
+       break
+    else:
+        print('Wrong password.Try again!')
+else:
+    print('Too many failed attempts. Access denied.')
+
+
+# Task5: Find First Word Longer Than 5 Letters
+# Loop through a list of words and print the first one longer than 5 letters. Stop the loop after finding it.
+
+words = ['Aitbubu is the winner', 'Aitbubu is a scientist', 'Aitbubu is the professional AI scientist']
+
+for sentence in words:
+    for word in sentence.split():
+        if len(word) > 5:
+            print('First word longer than 5 letters:', word)
+            break
+    else:
+        continue
+    break
+
+# Task6: Find First Even Number
+# Given a list of numbers, use a for loop to find and print the first even number. Stop looping after it.
+
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+for num in numbers:
+    if num % 2 == 0:
+        print('The first even number is:', num)
+        break
+
+#

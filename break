@@ -68,4 +68,54 @@ for num in numbers:
         print('The first even number is:', num)
         break
 
-#
+# Task7: # Search for the Letter ‘e’ in a Word
+# Ask the user to enter a word. Loop through its letters. Stop and print "Letter found!" if the letter 'e' is found.
+
+word = input('Enter your word: ')
+found = False
+
+for letter in word:
+    if letter == 'e':
+        print('Letter found!')
+        found = True
+        break
+
+if not found:
+    print('Letter e is not found!')
+
+# Task8: Stop at Special Character
+# Loop through a string character by character. Stop if a special character (e.g., @, #) is found.
+
+special_character = ['@', '#', '!', '?', '`', '*']
+word = input('Enter your word: ')
+
+for letter in word:
+    if letter in special_character:
+        print('Error! Special character found:', letter)
+        break
+    print(letter)
+
+# Task9: Stop When Total Exceeds 100
+# Loop through a list of numbers. Keep adding to a total. Stop when the total is more than 100.
+numbers = [1, 30, 40, 50, 60, 70]
+total = 0
+
+for num in numbers:
+    total += num
+    if total > 100:
+        print('Total exceeded 100:', total)
+        break
+    print('Current total:', total)
+
+#Task10: Break on Repeated Word
+# Loop through a list of user-entered words. Break the loop if the same word is entered twice in a row.
+
+previous_word = ''
+while True:
+    word = input('Enter a word: ')
+    if word == previous_word:
+        print('Repeated word found! Breaking the loop.')
+        break
+    previous_word = word
+
+

@@ -1,0 +1,9 @@
+# Find First Negative Number
+# Loop through a list of numbers and stop when the first negative number is found.
+
+numbers = [1, 2, 3, 4, -1, -2, -3, -4]
+
+for num in numbers:
+    if num < 0:
+        print("First negative number found:", num)
+        break

@@ -1,4 +1,4 @@
-# Find First Negative Number
+# Task1: Find First Negative Number
 # Loop through a list of numbers and stop when the first negative number is found.
 
 numbers = [1, 2, 3, 4, -1, -2, -3, -4]
@@ -7,3 +7,24 @@ for num in numbers:
     if num < 0:
         print("First negative number found:", num)
         break
+
+# Task 2: Find the first even number
+# Given a list of integers, iterate through it and print the first even number you find. Use break to stop the loop once found.\
+
+digits = [1, 2, 3, 5, 7, 9, 12]
+
+for digit in digits:
+    if digit % 2 == 0:
+        print('First Even number found is:', digit)
+        break
+
+# Task3: Stop on a specific word
+# Given a list of words, loop through them and stop when you reach the word "stop". Print all words before it.
+
+words = ['Possible', 'Opportunity', 'Bless me!', 'stop' , 'Never', 'Give up!']
+
+for word in words:
+    if word == 'stop':
+        break
+    print(word)
+

@@ -1,0 +1,108 @@
+# Task 1. Skip Even Numbers
+# Print only the odd numbers from a given list.
+#
+# numbers = [1, 2, 3, 4, 5, 6, 7]
+# for num in numbers:
+#     if num % 2 == 0:
+#         continue
+#     print(num)
+
+# 2. Skip Words with Less Than 4 Letters
+#  Print only the words that have 4 or more letters.
+
+# words = ['Better', 'Wonderful', 'main', 'yes', 'hi','be']
+#
+# for word in words:
+#     if len(word) < 4:
+#         continue
+#     print(f'The words with more than 4 letters are {word}')
+
+# 🔹 3. Skip Empty Strings
+# Task: Print only non-empty strings from a list.
+
+# words = ['nice', '', 'cool', '', 'great']
+#
+# for w in words:
+#     if w == '':
+#         continue
+#     print(f'The string is: {w}')
+
+# 🔹 4. Skip Duplicates
+# Task: Skip words that are already printed (avoid duplicates).
+
+# words = ['apple', 'banana', 'apple', 'orange', 'banana']
+# seen = set()
+#
+# for word in words:
+#     if word in seen:
+#         continue
+#     seen.add(word)
+#     print(word)
+
+
+# 🔹 5. Skip Numbers Below 50
+# Task: Print only the numbers that are 50 or more.
+
+# numbers = [10, 55, 32, 75, 90, 12]
+# for num in numbers:
+#     if num < 50:
+#         continue
+#     print(num)
+
+# 🔹 6. Skip Items That Contain a Specific Character
+# Task: Skip strings that contain the letter 'x'.
+
+# word = ['box', 'ball', 'tax', 'for' ,'fix', 'bey']
+#
+# for w in word:
+#     if 'x' in w:
+#         continue
+#     print(w)
+
+# 🔹 7. Skip Words Starting with a Vowel
+# Task: Print only words that don’t start with a vowel.
+
+# vowels = ('a', 'e', 'i', 'o', 'u')  # use a tuple
+# words = ['Bella', 'Ali', 'Ulan', 'jazz', 'open']
+#
+# for w in words:
+#     if w.lower().startswith(vowels):
+#         continue
+#     print(w)
+
+# Another solution:
+# words = ['apple', 'banana', 'orange', 'grape', 'mango']
+# for word in words:
+#     if word[0].lower() in 'aeiou':
+#         continue
+#     print(word)
+
+# 🔹 8. Skip Negative Numbers
+# Task: Print only positive numbers from the list.
+
+# numbers = [-1, 0, 1, -3, -6, -9, 10, 11]
+#
+# for num in numbers:
+#     if num < 0:
+#         continue
+#     print(num)
+
+# 🔹 9. Skip Numbers Not Divisible by 3
+# Task: Print numbers divisible by 3 only.
+
+# numbers = [3, 9, 5, 4, 1, 12, 15, 7, 18]
+#
+# for num in numbers:
+#     if num % 3 != 0:
+#         continue
+#     print(num)
+
+# 🔹 10. Skip Words That Are Too Long
+# Task: Print words that are 5 letters or shorter.
+
+words = ['project', 'laptop', 'academy', 'let', 'code', 'ict']
+
+for w in words:
+    if len(w) > 5:
+        continue
+    print(w)

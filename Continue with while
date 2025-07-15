@@ -1,0 +1,241 @@
+Using `continue` in a `**while loop**` is **less common** than in a `for loop`, but it can still be **very useful** — especially when:
+
+### ✅ You Should Use `continue` in a `while` loop When:
+
+1. **You want to skip part of the loop body** without stopping the loop entirely.
+2. You need to **validate input** or skip **invalid data** during each loop cycle.
+3. You're working with **dynamic conditions** (e.g., changing variables inside the loop).
+
+---
+
+### ⚠️ But Be Careful:
+
+* Unlike `for` loops, `while` loops **don’t automatically progress** — you must manually update variables **before or after `continue`**.
+* If you forget that, it may cause an **infinite loop**.
+
+---
+
+### 🔍 Example 1: Skip Even Numbers
+
+```python
+num = 0
+while num < 10:
+    num += 1
+    if num % 2 == 0:
+        continue
+    print(num)
+```
+
+🔹 This prints only **odd numbers**, because even numbers are skipped.
+
+---
+
+### 🔍 Example 2: Skip Empty User Input
+
+```python
+while True:
+    user_input = input("Enter something (or 'q' to quit): ")
+    if user_input == "":
+        continue
+    if user_input.lower() == 'q':
+        break
+    print("You entered:", user_input)
+```
+
+🔹 It **skips empty input** and **exits on 'q'**.
+
+---
+
+### 🔍 Example 3: Input Validation
+
+```python
+attempts = 0
+
+while attempts < 5:
+    password = input("Enter password: ")
+    if len(password) < 6:
+        print("Too short!")
+        attempts += 1
+        continue
+    print("Password accepted!")
+    break
+```
+
+🔹 Skips short passwords and lets user try again.
+
+---
+
+### ✅ Rule of Thumb:
+
+* Use `continue` in `while` loops only if:
+
+  * You’re **certain** the loop **won’t get stuck** (infinite loop).
+  * You handle **updates or inputs** correctly.
+* If your logic is getting complicated, consider **refactoring** the loop or using `for` instead.
+
+Perfect! Here are **🔟 `while` loop tasks using `continue`** to help you practice and understand how `continue` works in dynamic loop conditions:
+
+---
+
+### 🔹 1. Skip Even Numbers
+
+**Task:** Print only odd numbers from 1 to 10.
+
+```python
+num = 0
+while num < 10:
+    num += 1
+    if num % 2 == 0:
+        continue
+    print(num)
+```
+
+---
+
+### 🔹 2. Skip Empty Input
+
+**Task:** Ask the user to enter their name. Skip if input is empty.
+
+```python
+while True:
+    name = input("Enter your name (or 'q' to quit): ")
+    if name == "":
+        continue
+    if name.lower() == 'q':
+        break
+    print("Hello,", name)
+```
+
+---
+
+### 🔹 3. Skip Numbers Not Divisible by 3
+
+**Task:** Print numbers less than 20 that are divisible by 3.
+
+```python
+num = 0
+while num < 20:
+    num += 1
+    if num % 3 != 0:
+        continue
+    print(num)
+```
+
+---
+
+### 🔹 4. Skip Words That Are Too Short
+
+**Task:** Ask for words and skip if shorter than 4 characters.
+
+```python
+while True:
+    word = input("Enter a word (or 'stop'): ")
+    if word == "stop":
+        break
+    if len(word) < 4:
+        continue
+    print("Long enough:", word)
+```
+
+---
+
+### 🔹 5. Skip If Already Seen
+
+**Task:** Skip if the user enters the same word again.
+
+```python
+seen = []
+while True:
+    word = input("Enter a new word (or 'end'): ")
+    if word == 'end':
+        break
+    if word in seen:
+        print("Already entered!")
+        continue
+    seen.append(word)
+    print("New word:", word)
+```
+
+---
+
+### 🔹 6. Skip Negative Numbers
+
+**Task:** Accept numbers, but only print positives.
+
+```python
+while True:
+    n = int(input("Enter number (0 to stop): "))
+    if n == 0:
+        break
+    if n < 0:
+        continue
+    print("Positive number:", n)
+```
+
+---
+
+### 🔹 7. Skip Passwords That Don’t Have Numbers
+
+**Task:** Ask for a password and skip if it doesn't contain any digits.
+
+```python
+while True:
+    pwd = input("Enter password: ")
+    if any(char.isdigit() for char in pwd):
+        print("Password accepted")
+        break
+    print("Must include a number!")
+    continue
+```
+
+---
+
+### 🔹 8. Skip Words Starting with 'a'
+
+**Task:** Enter words and skip those starting with `'a'`.
+
+```python
+while True:
+    word = input("Type a word (or 'exit'): ")
+    if word == 'exit':
+        break
+    if word.startswith('a'):
+        continue
+    print("Accepted word:", word)
+```
+
+---
+
+### 🔹 9. Skip Input Longer Than 8 Characters
+
+**Task:** Only print input if it's less than or equal to 8 characters.
+
+```python
+while True:
+    text = input("Enter a short word (or 'bye'): ")
+    if text == 'bye':
+        break
+    if len(text) > 8:
+        print("Too long, try again.")
+        continue
+    print("Accepted:", text)
+```
+
+---
+
+### 🔹 10. Skip Repeating Characters
+
+**Task:** Ask for characters. Skip if the same character was entered last time.
+
+```python
+last_char = ""
+while True:
+    char = input("Enter a character (or 'x' to stop): ")
+    if char == 'x':
+        break
+    if char == last_char:
+        continue
+    print("You typed:", char)
+    last_char = char
+```
+

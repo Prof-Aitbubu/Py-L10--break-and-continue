@@ -1,0 +1,107 @@
+# 🔹 1. Stop at First Negative
+# Loop through a list of numbers. Stop the loop when you find the first negative number.
+#
+# numbers = [1,-1,2,-2,3,-3,4,-4]
+#
+# for num in numbers:
+#     if num < 0:
+#         print(f'first negative number is', num)
+#         break
+
+# 🔹 2. First Word Starting with 'A'
+# Loop through a list of words. Stop when you find the first word that starts with the letter 'A' (uppercase only).
+
+# words = ['Bella', 'Ben', 'Alice', 'Kaya', 'Raya', 'Andy']
+#
+# for word in words:
+#     if word.startswith('A'):
+#         print(f'The first word that starts with "A" is: {word}')
+#         break
+
+# 🔹 3. Find First Prime Number
+# Loop through a list of numbers and stop when you find the first prime number.
+
+# numbers = [4, 6, 8, 9, 10, 11, 12, 14]
+#
+# for num in numbers:
+#     if num > 1 and all(num % i != 0 for i in range(2, int(num**0.5) + 1)):
+#         print(f"The first prime number is: {num}")
+#         break
+
+#  🔹 4. Stop on Duplicate
+#  Loop through a list of user inputs. Stop if the same word is entered twice in a row.
+# inputs = []
+#
+# # Simulate or manually input words
+# for i in range(5):  # You can increase the range
+#     word = input('Enter your keyword: ')
+#     inputs.append(word)
+#
+#     if len(inputs) >= 2 and inputs[-1] == inputs[-2]:
+#         print(f'Stopped! You entered "{word}" twice in a row.')
+#         break
+
+# 🔹 5. Guess the Secret Code
+# Loop through a predefined list of guesses. Stop when a guess matches the secret code.
+
+# secret_code = 'admin123'
+# guesses = ['test1', 'hello', 'admin', 'admin123', 'guest']
+#
+# for guess in guesses:
+#     if guess == secret_code:
+#         print(f'Access is granted with: {guess}')
+#         break
+#     else:
+#         print(f'{guess} is wrong!')
+
+# 🔹 6. Find First Palindrome
+# Loop through a list of words and stop when you find the first word that is a palindrome (reads the same forward and backward).
+# words = ['Ana', 'Sasha', 'Bob', 'Alice']
+#
+# for word in words:
+#     if word.lower() == word.lower()[::-1]:
+#         print(f'The first palindrome word is {word}')
+#         break
+
+# 🔹 7. Break on Exceeding Total
+# Loop through a list of numbers and keep adding them. Break when the total exceeds 100.
+#
+# numbers = [10, 30, 12, 45, 55, 60]
+# total = 0
+#
+# for num in numbers:
+#     total += num
+#     if total > 100:
+#         print(f'Total exceeded 100! Current total: {total}')
+#         break
+
+# 🔹 8. Find First Long Word
+# Loop through a list of words. Stop when you find the first word longer than 8 characters.
+
+# words = ['Cool', 'JS', 'Python', 'Ruby', 'DevOpsEngineer']
+#
+# for word in words:
+#     if len(word) > 8:
+#         print(f'The first word longer than 8 characters is "{word}"')
+#         break
+
+# .🔹 9. Break on Special Character
+# Loop through a string. Stop when you find the first special character like @, #, $, etc.
+#
+# special_character = ['@', '#', '$', '!', '&']
+# words = input('Enter your word: ')
+#
+# for char in words:
+#     if char in special_character:
+#         print(f"I found a special character: '{char}'")
+#         break
+
+
+# 🔹 10. Find First Even Number
+# Loop through a list of numbers and stop when the first even number is found.
+numbers = [6, 7, 9, 5, 4, 2]
+
+for num in numbers:
+    if num % 2 == 0:
+        print(f'First even number found is {num}')
+        break
